@@ -54,9 +54,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnSalvarAlbuns = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
             this.lblPlaylist_Titulo = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lblNomeAlbum = new System.Windows.Forms.Label();
+            this.lblAlbumAutor = new System.Windows.Forms.Label();
+            this.imgCapa = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.lblEndTime = new System.Windows.Forms.Label();
@@ -68,7 +74,15 @@
             this.btnStart = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.btnStop = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lblNomeAlbum1 = new System.Windows.Forms.Label();
+            this.lblAlbumAutor1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblNomeAlbum2 = new System.Windows.Forms.Label();
+            this.lblAlbumAutor2 = new System.Windows.Forms.Label();
             this.pnlSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -76,7 +90,14 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCapa)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSideBar
@@ -313,7 +334,7 @@
             this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DarkGray;
-            this.label8.Location = new System.Drawing.Point(597, 344);
+            this.label8.Location = new System.Drawing.Point(597, 332);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 19);
             this.label8.TabIndex = 18;
@@ -325,11 +346,11 @@
             this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(594, 298);
+            this.label9.Location = new System.Drawing.Point(594, 286);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(97, 37);
+            this.label9.Size = new System.Drawing.Size(73, 37);
             this.label9.TabIndex = 17;
-            this.label9.Text = "Cantor";
+            this.label9.Text = "Data";
             // 
             // label6
             // 
@@ -337,7 +358,7 @@
             this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DarkGray;
-            this.label6.Location = new System.Drawing.Point(597, 248);
+            this.label6.Location = new System.Drawing.Point(597, 236);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 19);
             this.label6.TabIndex = 16;
@@ -349,11 +370,11 @@
             this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(594, 202);
+            this.label7.Location = new System.Drawing.Point(594, 190);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 37);
+            this.label7.Size = new System.Drawing.Size(95, 37);
             this.label7.TabIndex = 15;
-            this.label7.Text = "Genero";
+            this.label7.Text = "Album";
             // 
             // label5
             // 
@@ -361,7 +382,7 @@
             this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkGray;
-            this.label5.Location = new System.Drawing.Point(597, 162);
+            this.label5.Location = new System.Drawing.Point(597, 150);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 19);
             this.label5.TabIndex = 14;
@@ -373,7 +394,7 @@
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(594, 116);
+            this.label4.Location = new System.Drawing.Point(594, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(217, 37);
             this.label4.TabIndex = 13;
@@ -381,6 +402,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnExcluir);
+            this.tabPage2.Controls.Add(this.btnSalvarAlbuns);
             this.tabPage2.Controls.Add(this.btnLoad);
             this.tabPage2.Controls.Add(this.lblPlaylist_Titulo);
             this.tabPage2.Controls.Add(this.listBox1);
@@ -391,6 +414,26 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Playlist";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(174, 408);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(112, 23);
+            this.btnExcluir.TabIndex = 10;
+            this.btnExcluir.Text = "EXCLUIR";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnSalvarAlbuns
+            // 
+            this.btnSalvarAlbuns.Location = new System.Drawing.Point(791, 408);
+            this.btnSalvarAlbuns.Name = "btnSalvarAlbuns";
+            this.btnSalvarAlbuns.Size = new System.Drawing.Size(141, 23);
+            this.btnSalvarAlbuns.TabIndex = 9;
+            this.btnSalvarAlbuns.Text = "SALVAR EM ALBUNS";
+            this.btnSalvarAlbuns.UseVisualStyleBackColor = true;
+            this.btnSalvarAlbuns.Click += new System.EventHandler(this.btnSalvarAlbuns_Click);
             // 
             // btnLoad
             // 
@@ -422,6 +465,49 @@
             this.listBox1.Size = new System.Drawing.Size(876, 277);
             this.listBox1.TabIndex = 0;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.panel5);
+            this.tabPage3.Controls.Add(this.panel4);
+            this.tabPage3.Controls.Add(this.panel3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 4);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(983, 489);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Albuns";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // lblNomeAlbum
+            // 
+            this.lblNomeAlbum.AutoSize = true;
+            this.lblNomeAlbum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeAlbum.Location = new System.Drawing.Point(15, 158);
+            this.lblNomeAlbum.Name = "lblNomeAlbum";
+            this.lblNomeAlbum.Size = new System.Drawing.Size(136, 15);
+            this.lblNomeAlbum.TabIndex = 5;
+            this.lblNomeAlbum.Tag = "";
+            this.lblNomeAlbum.Text = "EXEMPLO ALBUM +";
+            // 
+            // lblAlbumAutor
+            // 
+            this.lblAlbumAutor.AutoSize = true;
+            this.lblAlbumAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlbumAutor.Location = new System.Drawing.Point(15, 173);
+            this.lblAlbumAutor.Name = "lblAlbumAutor";
+            this.lblAlbumAutor.Size = new System.Drawing.Size(93, 15);
+            this.lblAlbumAutor.TabIndex = 4;
+            this.lblAlbumAutor.Text = "Autor do Album:";
+            // 
+            // imgCapa
+            // 
+            this.imgCapa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imgCapa.Location = new System.Drawing.Point(18, 3);
+            this.imgCapa.Name = "imgCapa";
+            this.imgCapa.Size = new System.Drawing.Size(200, 152);
+            this.imgCapa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgCapa.TabIndex = 1;
+            this.imgCapa.TabStop = false;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(17)))), ((int)(((byte)(115)))));
@@ -444,7 +530,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(245, 26);
+            this.label11.Location = new System.Drawing.Point(217, 26);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(34, 13);
             this.label11.TabIndex = 24;
@@ -455,7 +541,7 @@
             this.lblEndTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEndTime.AutoSize = true;
             this.lblEndTime.ForeColor = System.Drawing.Color.White;
-            this.lblEndTime.Location = new System.Drawing.Point(619, 26);
+            this.lblEndTime.Location = new System.Drawing.Point(591, 26);
             this.lblEndTime.Margin = new System.Windows.Forms.Padding(0);
             this.lblEndTime.Name = "lblEndTime";
             this.lblEndTime.Size = new System.Drawing.Size(34, 13);
@@ -467,7 +553,7 @@
             // 
             this.lblStartTime.AutoSize = true;
             this.lblStartTime.ForeColor = System.Drawing.Color.White;
-            this.lblStartTime.Location = new System.Drawing.Point(245, 26);
+            this.lblStartTime.Location = new System.Drawing.Point(217, 26);
             this.lblStartTime.Name = "lblStartTime";
             this.lblStartTime.Size = new System.Drawing.Size(34, 13);
             this.lblStartTime.TabIndex = 22;
@@ -475,7 +561,7 @@
             // 
             // timerPlayback
             // 
-            this.timerPlayback.Location = new System.Drawing.Point(248, 43);
+            this.timerPlayback.Location = new System.Drawing.Point(220, 43);
             this.timerPlayback.Name = "timerPlayback";
             this.timerPlayback.Size = new System.Drawing.Size(400, 5);
             this.timerPlayback.TabIndex = 21;
@@ -483,7 +569,7 @@
             // 
             // volumeBar
             // 
-            this.volumeBar.Location = new System.Drawing.Point(735, 21);
+            this.volumeBar.Location = new System.Drawing.Point(706, 26);
             this.volumeBar.Name = "volumeBar";
             this.volumeBar.Size = new System.Drawing.Size(184, 27);
             this.volumeBar.TabIndex = 20;
@@ -500,7 +586,7 @@
             this.siticoneImageButton4.ImageOffset = new System.Drawing.Point(0, 0);
             this.siticoneImageButton4.ImageRotate = 0F;
             this.siticoneImageButton4.ImageSize = new System.Drawing.Size(32, 32);
-            this.siticoneImageButton4.Location = new System.Drawing.Point(932, 16);
+            this.siticoneImageButton4.Location = new System.Drawing.Point(909, 21);
             this.siticoneImageButton4.Name = "siticoneImageButton4";
             this.siticoneImageButton4.PressedState.ImageSize = new System.Drawing.Size(32, 32);
             this.siticoneImageButton4.Size = new System.Drawing.Size(32, 32);
@@ -517,7 +603,7 @@
             this.siticoneImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
             this.siticoneImageButton2.ImageRotate = 0F;
             this.siticoneImageButton2.ImageSize = new System.Drawing.Size(32, 32);
-            this.siticoneImageButton2.Location = new System.Drawing.Point(684, 16);
+            this.siticoneImageButton2.Location = new System.Drawing.Point(653, 21);
             this.siticoneImageButton2.Name = "siticoneImageButton2";
             this.siticoneImageButton2.PressedState.ImageSize = new System.Drawing.Size(32, 32);
             this.siticoneImageButton2.Size = new System.Drawing.Size(32, 32);
@@ -534,7 +620,7 @@
             this.btnStart.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnStart.ImageRotate = 0F;
             this.btnStart.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnStart.Location = new System.Drawing.Point(92, 21);
+            this.btnStart.Location = new System.Drawing.Point(64, 21);
             this.btnStart.Name = "btnStart";
             this.btnStart.PressedState.ImageSize = new System.Drawing.Size(32, 32);
             this.btnStart.Size = new System.Drawing.Size(32, 32);
@@ -551,7 +637,7 @@
             this.btnStop.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnStop.ImageRotate = 0F;
             this.btnStop.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnStop.Location = new System.Drawing.Point(141, 21);
+            this.btnStop.Location = new System.Drawing.Point(113, 21);
             this.btnStop.Name = "btnStop";
             this.btnStop.PressedState.ImageSize = new System.Drawing.Size(32, 32);
             this.btnStop.Size = new System.Drawing.Size(32, 32);
@@ -563,14 +649,97 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // tabPage3
+            // lblNomeAlbum1
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 4);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(983, 489);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Albuns";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.lblNomeAlbum1.AutoSize = true;
+            this.lblNomeAlbum1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeAlbum1.Location = new System.Drawing.Point(15, 158);
+            this.lblNomeAlbum1.Name = "lblNomeAlbum1";
+            this.lblNomeAlbum1.Size = new System.Drawing.Size(136, 15);
+            this.lblNomeAlbum1.TabIndex = 8;
+            this.lblNomeAlbum1.Tag = "";
+            this.lblNomeAlbum1.Text = "EXEMPLO ALBUM +";
+            // 
+            // lblAlbumAutor1
+            // 
+            this.lblAlbumAutor1.AutoSize = true;
+            this.lblAlbumAutor1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlbumAutor1.Location = new System.Drawing.Point(15, 173);
+            this.lblAlbumAutor1.Name = "lblAlbumAutor1";
+            this.lblAlbumAutor1.Size = new System.Drawing.Size(93, 15);
+            this.lblAlbumAutor1.TabIndex = 7;
+            this.lblAlbumAutor1.Text = "Autor do Album:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(18, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 152);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.imgCapa);
+            this.panel3.Controls.Add(this.lblAlbumAutor);
+            this.panel3.Controls.Add(this.lblNomeAlbum);
+            this.panel3.Location = new System.Drawing.Point(4, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(244, 203);
+            this.panel3.TabIndex = 9;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Controls.Add(this.lblNomeAlbum1);
+            this.panel4.Controls.Add(this.lblAlbumAutor1);
+            this.panel4.Location = new System.Drawing.Point(254, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(244, 203);
+            this.panel4.TabIndex = 10;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.pictureBox2);
+            this.panel5.Controls.Add(this.lblNomeAlbum2);
+            this.panel5.Controls.Add(this.lblAlbumAutor2);
+            this.panel5.Location = new System.Drawing.Point(504, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(244, 203);
+            this.panel5.TabIndex = 11;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Location = new System.Drawing.Point(18, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(200, 152);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lblNomeAlbum2
+            // 
+            this.lblNomeAlbum2.AutoSize = true;
+            this.lblNomeAlbum2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeAlbum2.Location = new System.Drawing.Point(15, 158);
+            this.lblNomeAlbum2.Name = "lblNomeAlbum2";
+            this.lblNomeAlbum2.Size = new System.Drawing.Size(136, 15);
+            this.lblNomeAlbum2.TabIndex = 8;
+            this.lblNomeAlbum2.Tag = "";
+            this.lblNomeAlbum2.Text = "EXEMPLO ALBUM +";
+            // 
+            // lblAlbumAutor2
+            // 
+            this.lblAlbumAutor2.AutoSize = true;
+            this.lblAlbumAutor2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlbumAutor2.Location = new System.Drawing.Point(15, 173);
+            this.lblAlbumAutor2.Name = "lblAlbumAutor2";
+            this.lblAlbumAutor2.Size = new System.Drawing.Size(93, 15);
+            this.lblAlbumAutor2.TabIndex = 7;
+            this.lblAlbumAutor2.Text = "Autor do Album:";
             // 
             // Form1
             // 
@@ -596,8 +765,18 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imgCapa)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -625,8 +804,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneImageButton btnStart;
         private Siticone.Desktop.UI.WinForms.SiticoneImageButton btnStop;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
@@ -643,6 +820,22 @@
         private System.Windows.Forms.Label lblStartTime;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button btnSalvarAlbuns;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.PictureBox imgCapa;
+        private System.Windows.Forms.Label lblAlbumAutor;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label lblNomeAlbum;
+        public System.Windows.Forms.Label lblNomeAlbum1;
+        private System.Windows.Forms.Label lblAlbumAutor1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.Label lblNomeAlbum2;
+        private System.Windows.Forms.Label lblAlbumAutor2;
     }
 }
 

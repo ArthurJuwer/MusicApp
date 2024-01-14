@@ -1,42 +1,107 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 
 namespace MusicApp
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form 
     {
         private List<string> musicFiles;
         private string currentSong;
         private bool isPaused;
+        Conexao conexao = new Conexao();
+        
 
+        
+        
 
+        // variaveis globais
+        string sql;
+
+        // variavel q pega o id do registro
         
         public Form1()
         {
+            
             InitializeComponent();
             musicFiles = new List<string>();
             isPaused = false;
+
             
+
             
+
+            conexao.AbrirConexao();
+            var cmd = new MySqlCommand("SELECT autor, nome FROM albuns WHERE id=1", conexao.conx);
+                
+                var reader = cmd.ExecuteReader();
+                    
+                while (reader.Read())
+                {
+                    var fname = reader.GetString(0);
+                    var lname = reader.GetString(1);
+                    lblNomeAlbum.Text = fname;
+                    lblAlbumAutor.Text = lname;
+                }
+            conexao.FecharConexao();
+
+            conexao.AbrirConexao();
+            var cmd1 = new MySqlCommand("SELECT autor, nome FROM albuns WHERE id=2", conexao.conx);
+
+            var reader1 = cmd1.ExecuteReader();
+
+            while (reader1.Read())
+            {
+                var fname1 = reader1.GetString(0);
+                var lname1 = reader1.GetString(1);
+                lblNomeAlbum1.Text = fname1;
+                lblAlbumAutor1.Text = lname1;
+            }
+            conexao.FecharConexao();
+
+            conexao.AbrirConexao();
+            var cmd2 = new MySqlCommand("SELECT autor, nome FROM albuns WHERE id=3", conexao.conx);
+
+            var reader2 = cmd2.ExecuteReader();
+
+            while (reader2.Read())
+            {
+                var fname2 = reader2.GetString(0);
+                var lname2 = reader2.GetString(1);
+                lblNomeAlbum2.Text = fname2;
+                lblAlbumAutor2.Text = lname2.ToUpper();
+            }
+            conexao.FecharConexao();
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
             
 
         }
-        
-
-        
-
-        
-        
-
         private void lblDescobrir_Click(object sender, EventArgs e)
         {
             var point = new Point(35, 298);
@@ -55,6 +120,7 @@ namespace MusicApp
         {
             var point = new Point(35, 376);
             this.ShapeButton.Location = point;
+            tabControl1.SelectedTab = tabPage3;
         }
 
         private void siticoneImageButton1_Click(object sender, EventArgs e)
@@ -79,16 +145,12 @@ namespace MusicApp
                     musicPlayer.URL = currentSong;
                     musicPlayer.Ctlcontrols.play();
 
-                    if (currentSong.Contains("D:"))
-                    {
-                        lblTitulo.Text = currentSong + " - Tocando";
-                    }   
-
 
                 }
                 timerPlayback.Enabled = true;
             }
         }
+        
 
         private void btnStop_Click(object sender, EventArgs e)
         {
@@ -125,8 +187,13 @@ namespace MusicApp
             }
             
         }
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.RemoveAt(listBox1.SelectedIndex); 
 
-        
+        }
+
+
         private void timerPlayback_Scroll(object sender, ScrollEventArgs e)
         {
             musicPlayer.settings.volume = volumeBar.Value;
@@ -142,13 +209,8 @@ namespace MusicApp
             musicPlayer.settings.volume = volumeBar.Value = 100;
         }
         
-
         
-
-        private void siticoneImageButton9_Click(object sender, EventArgs e)
-        {
-            musicPlayer.Ctlcontrols.previous();
-        }
+        
         private void musicPlayer_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
         {
             if (e.newState == 8)
@@ -212,6 +274,23 @@ namespace MusicApp
                 var point = new Point(35, 335);
                 this.ShapeButton.Location = point;
             }
+            if (tabControl1.SelectedTab == tabPage3)
+            {
+                var point = new Point(35, 376);
+                this.ShapeButton.Location = point;
+            }
+        }
+
+        private void btnSalvarAlbuns_Click(object sender, EventArgs e)
+        {
+            AdicionarAlbuns adicionarAlbuns = new AdicionarAlbuns();
+            adicionarAlbuns.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+
         }
     }
     
