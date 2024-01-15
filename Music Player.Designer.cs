@@ -60,9 +60,18 @@
             this.lblPlaylist_Titulo = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.lblNomeAlbum = new System.Windows.Forms.Label();
-            this.lblAlbumAutor = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.img2 = new System.Windows.Forms.PictureBox();
+            this.lblNomeAlbum2 = new System.Windows.Forms.Label();
+            this.lblAlbumAutor2 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblNomeAlbum1 = new System.Windows.Forms.Label();
+            this.lblAlbumAutor1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.imgCapa = new System.Windows.Forms.PictureBox();
+            this.lblAlbumAutor = new System.Windows.Forms.Label();
+            this.lblNomeAlbum = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.lblEndTime = new System.Windows.Forms.Label();
@@ -74,15 +83,17 @@
             this.btnStart = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.btnStop = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblNomeAlbum1 = new System.Windows.Forms.Label();
-            this.lblAlbumAutor1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtAutor = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblNomeAlbum2 = new System.Windows.Forms.Label();
-            this.lblAlbumAutor2 = new System.Windows.Forms.Label();
+            this.txtcbPrivacidade = new System.Windows.Forms.ComboBox();
             this.pnlSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -91,12 +102,13 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCapa)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.img2)).BeginInit();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCapa)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -402,6 +414,17 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnEditar);
+            this.tabPage2.Controls.Add(this.btnSalvar);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.txtDescricao);
+            this.tabPage2.Controls.Add(this.label10);
+            this.tabPage2.Controls.Add(this.txtNome);
+            this.tabPage2.Controls.Add(this.label12);
+            this.tabPage2.Controls.Add(this.txtAutor);
+            this.tabPage2.Controls.Add(this.label13);
+            this.tabPage2.Controls.Add(this.pictureBox2);
+            this.tabPage2.Controls.Add(this.txtcbPrivacidade);
             this.tabPage2.Controls.Add(this.btnExcluir);
             this.tabPage2.Controls.Add(this.btnSalvarAlbuns);
             this.tabPage2.Controls.Add(this.btnLoad);
@@ -427,7 +450,7 @@
             // 
             // btnSalvarAlbuns
             // 
-            this.btnSalvarAlbuns.Location = new System.Drawing.Point(791, 408);
+            this.btnSalvarAlbuns.Location = new System.Drawing.Point(292, 408);
             this.btnSalvarAlbuns.Name = "btnSalvarAlbuns";
             this.btnSalvarAlbuns.Size = new System.Drawing.Size(141, 23);
             this.btnSalvarAlbuns.TabIndex = 9;
@@ -460,9 +483,9 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(56, 111);
+            this.listBox1.Location = new System.Drawing.Point(56, 112);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(876, 277);
+            this.listBox1.Size = new System.Drawing.Size(377, 277);
             this.listBox1.TabIndex = 0;
             // 
             // tabPage3
@@ -477,16 +500,107 @@
             this.tabPage3.Text = "Albuns";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // lblNomeAlbum
+            // panel5
             // 
-            this.lblNomeAlbum.AutoSize = true;
-            this.lblNomeAlbum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeAlbum.Location = new System.Drawing.Point(15, 158);
-            this.lblNomeAlbum.Name = "lblNomeAlbum";
-            this.lblNomeAlbum.Size = new System.Drawing.Size(136, 15);
-            this.lblNomeAlbum.TabIndex = 5;
-            this.lblNomeAlbum.Tag = "";
-            this.lblNomeAlbum.Text = "EXEMPLO ALBUM +";
+            this.panel5.Controls.Add(this.img2);
+            this.panel5.Controls.Add(this.lblNomeAlbum2);
+            this.panel5.Controls.Add(this.lblAlbumAutor2);
+            this.panel5.Location = new System.Drawing.Point(504, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(244, 203);
+            this.panel5.TabIndex = 11;
+            // 
+            // img2
+            // 
+            this.img2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.img2.Location = new System.Drawing.Point(18, 3);
+            this.img2.Name = "img2";
+            this.img2.Size = new System.Drawing.Size(200, 152);
+            this.img2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.img2.TabIndex = 6;
+            this.img2.TabStop = false;
+            // 
+            // lblNomeAlbum2
+            // 
+            this.lblNomeAlbum2.AutoSize = true;
+            this.lblNomeAlbum2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeAlbum2.Location = new System.Drawing.Point(15, 158);
+            this.lblNomeAlbum2.Name = "lblNomeAlbum2";
+            this.lblNomeAlbum2.Size = new System.Drawing.Size(136, 15);
+            this.lblNomeAlbum2.TabIndex = 8;
+            this.lblNomeAlbum2.Tag = "";
+            this.lblNomeAlbum2.Text = "EXEMPLO ALBUM +";
+            // 
+            // lblAlbumAutor2
+            // 
+            this.lblAlbumAutor2.AutoSize = true;
+            this.lblAlbumAutor2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlbumAutor2.Location = new System.Drawing.Point(15, 173);
+            this.lblAlbumAutor2.Name = "lblAlbumAutor2";
+            this.lblAlbumAutor2.Size = new System.Drawing.Size(93, 15);
+            this.lblAlbumAutor2.TabIndex = 7;
+            this.lblAlbumAutor2.Text = "Autor do Album:";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Controls.Add(this.lblNomeAlbum1);
+            this.panel4.Controls.Add(this.lblAlbumAutor1);
+            this.panel4.Location = new System.Drawing.Point(254, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(244, 203);
+            this.panel4.TabIndex = 10;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(18, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 152);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblNomeAlbum1
+            // 
+            this.lblNomeAlbum1.AutoSize = true;
+            this.lblNomeAlbum1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeAlbum1.Location = new System.Drawing.Point(15, 158);
+            this.lblNomeAlbum1.Name = "lblNomeAlbum1";
+            this.lblNomeAlbum1.Size = new System.Drawing.Size(136, 15);
+            this.lblNomeAlbum1.TabIndex = 8;
+            this.lblNomeAlbum1.Tag = "";
+            this.lblNomeAlbum1.Text = "EXEMPLO ALBUM +";
+            // 
+            // lblAlbumAutor1
+            // 
+            this.lblAlbumAutor1.AutoSize = true;
+            this.lblAlbumAutor1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlbumAutor1.Location = new System.Drawing.Point(15, 173);
+            this.lblAlbumAutor1.Name = "lblAlbumAutor1";
+            this.lblAlbumAutor1.Size = new System.Drawing.Size(93, 15);
+            this.lblAlbumAutor1.TabIndex = 7;
+            this.lblAlbumAutor1.Text = "Autor do Album:";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.imgCapa);
+            this.panel3.Controls.Add(this.lblAlbumAutor);
+            this.panel3.Controls.Add(this.lblNomeAlbum);
+            this.panel3.Location = new System.Drawing.Point(4, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(244, 203);
+            this.panel3.TabIndex = 9;
+            // 
+            // imgCapa
+            // 
+            this.imgCapa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imgCapa.Location = new System.Drawing.Point(18, 3);
+            this.imgCapa.Name = "imgCapa";
+            this.imgCapa.Size = new System.Drawing.Size(200, 152);
+            this.imgCapa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgCapa.TabIndex = 1;
+            this.imgCapa.TabStop = false;
             // 
             // lblAlbumAutor
             // 
@@ -498,15 +612,16 @@
             this.lblAlbumAutor.TabIndex = 4;
             this.lblAlbumAutor.Text = "Autor do Album:";
             // 
-            // imgCapa
+            // lblNomeAlbum
             // 
-            this.imgCapa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imgCapa.Location = new System.Drawing.Point(18, 3);
-            this.imgCapa.Name = "imgCapa";
-            this.imgCapa.Size = new System.Drawing.Size(200, 152);
-            this.imgCapa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgCapa.TabIndex = 1;
-            this.imgCapa.TabStop = false;
+            this.lblNomeAlbum.AutoSize = true;
+            this.lblNomeAlbum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeAlbum.Location = new System.Drawing.Point(15, 158);
+            this.lblNomeAlbum.Name = "lblNomeAlbum";
+            this.lblNomeAlbum.Size = new System.Drawing.Size(136, 15);
+            this.lblNomeAlbum.TabIndex = 5;
+            this.lblNomeAlbum.Tag = "";
+            this.lblNomeAlbum.Text = "EXEMPLO ALBUM +";
             // 
             // panel1
             // 
@@ -649,97 +764,107 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // lblNomeAlbum1
+            // btnEditar
             // 
-            this.lblNomeAlbum1.AutoSize = true;
-            this.lblNomeAlbum1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeAlbum1.Location = new System.Drawing.Point(15, 158);
-            this.lblNomeAlbum1.Name = "lblNomeAlbum1";
-            this.lblNomeAlbum1.Size = new System.Drawing.Size(136, 15);
-            this.lblNomeAlbum1.TabIndex = 8;
-            this.lblNomeAlbum1.Tag = "";
-            this.lblNomeAlbum1.Text = "EXEMPLO ALBUM +";
+            this.btnEditar.Location = new System.Drawing.Point(463, 330);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(71, 23);
+            this.btnEditar.TabIndex = 22;
+            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // lblAlbumAutor1
+            // btnSalvar
             // 
-            this.lblAlbumAutor1.AutoSize = true;
-            this.lblAlbumAutor1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlbumAutor1.Location = new System.Drawing.Point(15, 173);
-            this.lblAlbumAutor1.Name = "lblAlbumAutor1";
-            this.lblAlbumAutor1.Size = new System.Drawing.Size(93, 15);
-            this.lblAlbumAutor1.TabIndex = 7;
-            this.lblAlbumAutor1.Text = "Autor do Album:";
+            this.btnSalvar.Location = new System.Drawing.Point(739, 330);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(227, 23);
+            this.btnSalvar.TabIndex = 21;
+            this.btnSalvar.Text = "SALVAR";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // pictureBox1
+            // label3
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(18, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 152);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(736, 284);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 15);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Privacidade:";
             // 
-            // panel3
+            // txtDescricao
             // 
-            this.panel3.Controls.Add(this.imgCapa);
-            this.panel3.Controls.Add(this.lblAlbumAutor);
-            this.panel3.Controls.Add(this.lblNomeAlbum);
-            this.panel3.Location = new System.Drawing.Point(4, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(244, 203);
-            this.panel3.TabIndex = 9;
+            this.txtDescricao.Location = new System.Drawing.Point(739, 252);
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(227, 20);
+            this.txtDescricao.TabIndex = 18;
             // 
-            // panel4
+            // label10
             // 
-            this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Controls.Add(this.lblNomeAlbum1);
-            this.panel4.Controls.Add(this.lblAlbumAutor1);
-            this.panel4.Location = new System.Drawing.Point(254, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(244, 203);
-            this.panel4.TabIndex = 10;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(736, 234);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(120, 15);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "Descrição do Album:";
             // 
-            // panel5
+            // txtNome
             // 
-            this.panel5.Controls.Add(this.pictureBox2);
-            this.panel5.Controls.Add(this.lblNomeAlbum2);
-            this.panel5.Controls.Add(this.lblAlbumAutor2);
-            this.panel5.Location = new System.Drawing.Point(504, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(244, 203);
-            this.panel5.TabIndex = 11;
+            this.txtNome.Location = new System.Drawing.Point(739, 205);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(227, 20);
+            this.txtNome.TabIndex = 16;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(736, 131);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(93, 15);
+            this.label12.TabIndex = 15;
+            this.label12.Text = "Autor do Album:";
+            // 
+            // txtAutor
+            // 
+            this.txtAutor.Location = new System.Drawing.Point(739, 149);
+            this.txtAutor.Name = "txtAutor";
+            this.txtAutor.Size = new System.Drawing.Size(227, 20);
+            this.txtAutor.TabIndex = 14;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(736, 187);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(99, 15);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "Nome do Album:";
             // 
             // pictureBox2
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(18, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(463, 132);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(200, 152);
+            this.pictureBox2.Size = new System.Drawing.Size(240, 192);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
             // 
-            // lblNomeAlbum2
+            // txtcbPrivacidade
             // 
-            this.lblNomeAlbum2.AutoSize = true;
-            this.lblNomeAlbum2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeAlbum2.Location = new System.Drawing.Point(15, 158);
-            this.lblNomeAlbum2.Name = "lblNomeAlbum2";
-            this.lblNomeAlbum2.Size = new System.Drawing.Size(136, 15);
-            this.lblNomeAlbum2.TabIndex = 8;
-            this.lblNomeAlbum2.Tag = "";
-            this.lblNomeAlbum2.Text = "EXEMPLO ALBUM +";
-            // 
-            // lblAlbumAutor2
-            // 
-            this.lblAlbumAutor2.AutoSize = true;
-            this.lblAlbumAutor2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlbumAutor2.Location = new System.Drawing.Point(15, 173);
-            this.lblAlbumAutor2.Name = "lblAlbumAutor2";
-            this.lblAlbumAutor2.Size = new System.Drawing.Size(93, 15);
-            this.lblAlbumAutor2.TabIndex = 7;
-            this.lblAlbumAutor2.Text = "Autor do Album:";
+            this.txtcbPrivacidade.FormattingEnabled = true;
+            this.txtcbPrivacidade.Items.AddRange(new object[] {
+            "Publico",
+            "Privada"});
+            this.txtcbPrivacidade.Location = new System.Drawing.Point(739, 302);
+            this.txtcbPrivacidade.Name = "txtcbPrivacidade";
+            this.txtcbPrivacidade.Size = new System.Drawing.Size(227, 21);
+            this.txtcbPrivacidade.TabIndex = 20;
             // 
             // Form1
             // 
@@ -766,16 +891,17 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.imgCapa)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.img2)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCapa)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -833,9 +959,20 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox img2;
         public System.Windows.Forms.Label lblNomeAlbum2;
         private System.Windows.Forms.Label lblAlbumAutor2;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtAutor;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ComboBox txtcbPrivacidade;
     }
 }
 

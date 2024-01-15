@@ -11,6 +11,7 @@ using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using MySql.Data.MySqlClient;
 
 
@@ -22,15 +23,26 @@ namespace MusicApp
         private string currentSong;
         private bool isPaused;
         Conexao conexao = new Conexao();
-        
+
+
 
         
-        
+        MySqlCommand cmd;
+        string foto = "";
+
+
+
 
         // variaveis globais
         string sql;
 
         // variavel q pega o id do registro
+        public string id;
+
+        // variaveis globais
+        
+
+        
         
         public Form1()
         {
@@ -38,6 +50,7 @@ namespace MusicApp
             InitializeComponent();
             musicFiles = new List<string>();
             isPaused = false;
+            
 
             
 
@@ -72,34 +85,63 @@ namespace MusicApp
             conexao.FecharConexao();
 
             conexao.AbrirConexao();
-            var cmd2 = new MySqlCommand("SELECT autor, nome FROM albuns WHERE id=3", conexao.conx);
+            //var cmd2 = new MySqlCommand("SELECT autor, nome, imagem FROM albuns WHERE id=8", conexao.conx);
 
-            var reader2 = cmd2.ExecuteReader();
+            //var reader2 = cmd2.ExecuteReader();
 
-            while (reader2.Read())
-            {
-                var fname2 = reader2.GetString(0);
-                var lname2 = reader2.GetString(1);
-                lblNomeAlbum2.Text = fname2;
-                lblAlbumAutor2.Text = lname2.ToUpper();
-            }
-            conexao.FecharConexao();
+            //while (reader2.Read())
+            //{
+            //    var fname2 = reader2.GetString(0);
+            //    var lname2 = reader2.GetString(1);
+            //    var ftname2 = reader2.GetString(2).Trim(); 
 
+            //    lblNomeAlbum2.Text = fname2;
+            //    lblAlbumAutor2.Text = lname2.ToUpper();
+            //    img2.BackgroundImage = null; // 
 
+                
+            //}
 
+            //conexao.FecharConexao();
 
+            //
 
-
-
-
-
-
-
+            
         }
+
+
+
+
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            conexao.AbrirConexao();
+            MySqlCommand command;
+            MySqlDataAdapter da;
+            string selectQuery = "SELECT * FROM albuns WHERE ID = 8";
+
+            command = new MySqlCommand(selectQuery, conexao.conx);
+
+            da = new MySqlDataAdapter(command);
+
+            DataTable table = new DataTable();
+
+            da.Fill(table);
+
+            lblAlbumAutor.Text = table.Rows[0][1].ToString();
+            lblNomeAlbum2.Text = table.Rows[0][2].ToString();
+            byte[] img = (byte[])table.Rows[0][5];
+
+            MemoryStream ms = new MemoryStream(img);   
+
+            img2.Image = Image.FromStream(ms);
+            da.Dispose();
+            conexao.FecharConexao();
+
             
+            
+
 
         }
         private void lblDescobrir_Click(object sender, EventArgs e)
@@ -292,8 +334,55 @@ namespace MusicApp
             
 
         }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            
+            
+                conexao.AbrirConexao();
+
+                sql = "INSERT INTO albuns (autor, nome, descricao, privacidade, imagem) VALUES(@autor, @nome, @descricao, @privacidade, @imagem)";
+
+                cmd = new MySqlCommand(sql, conexao.conx);
+
+
+                cmd.Parameters.AddWithValue("@autor", txtAutor.Text);
+                cmd.Parameters.AddWithValue("@nome", txtNome.Text);
+                cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
+                cmd.Parameters.AddWithValue("@privacidade", txtcbPrivacidade.Text);
+                cmd.Parameters.AddWithValue("@imagem", imgCapa.BackgroundImage);
+
+                cmd.ExecuteNonQuery();
+
+                conexao.FecharConexao();
+                MessageBox.Show("Álbum adicionado com sucesso!");
+                this.Close();
+            }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            ofd.InitialDirectory = @"D:\"; // ABRIR DIRETAMENTE NESTA PASTA
+
+            ofd.Title = "Busca de Arquivo de Imagem"; // TITULO
+
+            ofd.Filter = "Imagem png (*.png) |*.png"; // FILTRAR PARA NAO MOSTRAR IMG/OTHERS APENAS ARQUIVOS TXT // "Arquivo txt(*.txt)|*.txt" //  todos - > "TODOS (*.*) | *.*";
+
+            ofd.ShowDialog(); // ABRIR
+
+            if (ofd.ShowDialog() == DialogResult.Cancel)
+                return;
+
+            foto = ofd.FileName.ToString();
+            imgCapa.BackgroundImage = Image.FromFile(ofd.FileName);
+
+            ofd.Dispose(); // NAO SOBRECARREGA
+        }
+        
+    }
     }
     
 
 
-}
+
