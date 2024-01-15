@@ -57,12 +57,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdicionarAlbuns.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdicionarAlbuns.Designer.cs">
-      <DependentUpon>AdicionarAlbuns.cs</DependentUpon>
-    </Compile>
     <Compile Include="Conexao.cs" />
     <Compile Include="Music Player.cs">
       <SubType>Form</SubType>
@@ -72,9 +66,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AdicionarAlbuns.resx">
-      <DependentUpon>AdicionarAlbuns.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Music Player.resx">
       <DependentUpon>Music Player.cs</DependentUpon>
     </EmbeddedResource>
